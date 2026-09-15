@@ -11,12 +11,12 @@
 	
 	<body>
 		<button onclick="showPage('hitler')">About Hitler</button>
-		<button onclick="showPage('shit')">About Shit</button>
+		<button onclick="showPage('shit-disclaimer')">About Shit</button>
 	
 		<div id='hitler'>
 			<banner style="display: block; padding: 15px; border-radius: 10px; border: 3px solid #000; background-color: #6b7280; font-family: 'Comic Sans MS'; font-size: 18px;">
 				<div style='display: flex; align-items: center; gap: 30px;'>
-					<img style='height: 200px' src='hitler.jfif'>
+					<img style='height: 200px' src="hitler.jfif">
 					<div>
 						<h1>Hey, I did nothing wrong!</h1>
 					</div>
@@ -83,10 +83,19 @@
 			</div>
 		</div>
 		
+		<div id='shit-disclaimer' style='display: none; padding: 15px; border-radius: 10px; border: 3px solid #000; background-color: #6b7280; font-family: "Comic Sans MS"; font-size: 18px;'>
+			<h1>Are you sure you want to visit shit?</h1>
+			<h3>For my folks who just finished eating or are more sensitive to this type of content, please click away.</h3>
+			<h3><strong>You have been warned.</strong></h3>
+			
+			<button onclick='showPage("shit")'>About Shit</button>
+			<button onclick='showPage("hitler")'>Go back</button>
+		</div>
+		
 		<div id='shit' style='display: none; '>
 			<banner style="display: block; padding: 15px; border-radius: 10px; border: 3px solid #000; background-color: #6b7280; font-family: 'Comic Sans MS'; font-size: 18px;">
 				<div style='display: flex; align-items: center; gap: 30px;'>
-					<img style='height: 200px' src='shit.jfif'>
+					<img style='height: 200px' src="shit.jfif">
 					<div>
 						<h1><strong>This</strong> is <italic>shit</italic>.</h1>
 					</div>
@@ -160,7 +169,7 @@
 				<p><strong>Eat → Digest → Shit → Flush</strong></p>
 
 				<p>
-					Humanity has reached the moon, developed artificial intelligence, and built computers
+					Humanity has reached the moon, developed Actually Indians, and built computers
 					capable of running video games at hundreds of frames per second.
 				</p>
 
@@ -235,6 +244,7 @@
 		function showPage(page) {
 			document.getElementById("hitler").style.display = "none";
 			document.getElementById("shit").style.display = "none";
+			document.getElementById("shit-disclaimer").style.display = "none";
 
 			document.getElementById(page).style.display = "block";
 		}
